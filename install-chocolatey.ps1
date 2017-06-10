@@ -1,10 +1,14 @@
 ﻿#requires -runasadministrator
 
+if (Get-Command 'choco.exe' -ErrorAction SilentlyContinue) {
+  exit 0
+}
+
 $PermissableExecutionPolicies = @("Bypass", "Unrestricted")
 $ExecutionPolicy = Get-ExecutionPolicy
 
 If ($ExecutionPolicy -notin $PermissableExecutionPolicies) {
-  Write-Output "Execution policy is $($ExecutionPolicy). In order to execute this script the execution policy must be one of: $($PermissableExecutionPolicies -join ', ')."
+  Write-Output "Execution policy is $ExecutionPolicy. In order to execute this script the execution policy must be one of: $($PermissableExecutionPolicies -join ', ')."
   exit 1
 }
 
