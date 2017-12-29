@@ -2,4 +2,4 @@
 
 . "$PSScriptRoot\install-chocolatey.ps1"
 
-choco install googledrive -y
+choco install google-backup-and-sync -y
