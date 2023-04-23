@@ -1,1 +1,9 @@
-﻿winget install --id JetBrains.Toolbox --silent
+﻿$packageId = "JetBrains.Toolbox"
+
+winget show --exact --id $packageId
+
+if ($?) {
+    Write-Host "${packageId} is already installed."
+} else {
+    winget install --exact --id $packageId --silent
+}

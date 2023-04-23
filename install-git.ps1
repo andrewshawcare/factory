@@ -1,1 +1,9 @@
-﻿winget install --id Git.Git --silent
+﻿$packageId = "Git.Git"
+
+winget show --exact --id $packageId
+
+if ($?) {
+    Write-Host "${packageId} is already installed."
+} else {
+    winget install --exact --id $packageId --silent
+}
