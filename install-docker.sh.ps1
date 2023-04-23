@@ -1,1 +1,0 @@
-﻿winget install --id Docker.DockerDesktop --silent
