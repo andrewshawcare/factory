@@ -1,2 +1,2 @@
 wsl --update
-wsl --install --distribution Ubuntu
+wsl --install --no-launch --distribution Ubuntu
