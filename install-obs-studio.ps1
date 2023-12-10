@@ -1,6 +1,6 @@
 $packageId = "OBSProject.OBSStudio"
 
-winget show --exact --id $packageId
+winget list --exact --id $packageId
 
 if ($?) {
     Write-Host "${packageId} is already installed."
