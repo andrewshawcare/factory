@@ -1,4 +1,4 @@
-$packageId = "Elgato.ControlCenter"
+$packageId = "Elgato.CameraHub"
 
 winget list --exact --id $packageId
 
