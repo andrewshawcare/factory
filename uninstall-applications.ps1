@@ -7,8 +7,10 @@ function Uninstall-Application {
 Uninstall-Application('Clipchamp.Clipchamp')
 
 Uninstall-Application('Microsoft.BingNews')
+Uninstall-Application('Microsoft.BingSearch')
 Uninstall-Application('Microsoft.BingWeather')
 Uninstall-Application('Microsoft.Copilot')
+Uninstall-Application('Microsoft.Edge.GameAssist')
 Uninstall-Application('Microsoft.GamingApp')
 Uninstall-Application('Microsoft.GetHelp')
 Uninstall-Application('Microsoft.Getstarted')
@@ -51,6 +53,7 @@ Uninstall-Application('MicrosoftCorporationII.MicrosoftFamily')
 Uninstall-Application('MicrosoftCorporationII.QuickAssist')
 
 Uninstall-Application('MicrosoftTeams')
+Uninstall-Application('MSTeams')
 
 Uninstall-Application('MicrosoftWindows.Client.WebExperience')
 Uninstall-Application('MicrosoftWindows.CrossDevice')
@@ -58,4 +61,4 @@ Uninstall-Application('MicrosoftWindows.CrossDevice')
 Uninstall-Application('SpotifyAB.SpotifyMusic')
 
 # TODO: Find all packages to remove with this command
-Get-AppxPackage | Where-Object{$_.NonRemovable -eq $false -and $_.IsFramework -eq $false} | Select-Object -Property Name, Publisher, IsFramework
+# Get-AppxPackage | Where-Object{$_.NonRemovable -eq $false -and $_.IsFramework -eq $false} | Select-Object -Property Name, PackageFamilyName, IsResourcePackage, IsBundle, SignatureKind, Status
